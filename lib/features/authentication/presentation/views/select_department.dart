@@ -1,4 +1,5 @@
 import 'package:fcai_platform/core/animation/select_dapartment_animation_controller.dart';
+import 'package:fcai_platform/features/authentication/presentation/views/widgets/select_department_body.dart';
 import 'package:flutter/material.dart';
 import 'package:fcai_platform/core/utils/app_colors.dart';
 
@@ -41,10 +42,7 @@ class _SelectDepartmentState extends State<SelectDepartment>
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [],
-          ),
+          child: SelectDepartmentBody(),
         ),
       ),
     );
