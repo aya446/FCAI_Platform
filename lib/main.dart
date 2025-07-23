@@ -1,4 +1,4 @@
-import 'package:fcai_platform/features/splash/presentation/splash_view.dart';
+import 'package:fcai_platform/core/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +10,9 @@ class FCAIPlatform extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashView());
+    return MaterialApp.router(
+      routerConfig: appRouter,
+      debugShowCheckedModeBanner: false,
+    );
   }
 }

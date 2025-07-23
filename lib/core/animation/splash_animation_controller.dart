@@ -1,6 +1,7 @@
 import 'package:fcai_platform/core/animation/splash_animation.dart';
+import 'package:fcai_platform/core/utils/app_routes.dart';
 import 'package:flutter/material.dart';
-import '../../../features/authentication/presentation/views/select_department.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashAnimationController {
   final TickerProvider vsync;
@@ -29,9 +30,7 @@ class SplashAnimationController {
 
     fadeController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const SelectDepartment()),
-        );
+        context.go(AppRoutes.selectDepartment);
       }
     });
   }

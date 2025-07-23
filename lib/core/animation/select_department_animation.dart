@@ -4,7 +4,7 @@ class SelectDepartmentAnimations {
   static AnimationController fadeInController({required TickerProvider vsync}) {
     return AnimationController(
       vsync: vsync,
-      duration: const Duration(milliseconds: 1200),
+      duration: const Duration(milliseconds: 1000),
     );
   }
 

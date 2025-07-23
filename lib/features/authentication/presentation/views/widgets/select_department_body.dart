@@ -15,11 +15,11 @@ class SelectDepartmentBody extends StatelessWidget {
           width: size.width * .8,
           child: Text(
             'Welcome to Faculty of Computer and artificial intelligence ',
-            style: Styles.white20,
+            style: Styles.white16,
             textAlign: TextAlign.center,
           ),
         ),
-        SizedBox(height: 50),
+        SizedBox(height: 70),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -30,7 +30,7 @@ class SelectDepartmentBody extends StatelessWidget {
         ),
         SizedBox(height: 15),
         SizedBox(
-          height: size.height * .14,
+          height: size.height * .2,
           width: size.width * 0.7,
           child: const DepartmentListView(),
         ),
