@@ -1,4 +1,5 @@
 import 'package:fcai_platform/core/utils/app_colors.dart';
+import 'package:fcai_platform/features/main_app/FAQ/presentation/views/faq_body.dart';
 import 'package:fcai_platform/features/main_app/home/presentation/views/home_view.dart';
 import 'package:fcai_platform/features/main_app/home/presentation/views/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class _MainScaffoldState extends State<MainScaffold> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> screens = [
-      const FAQScreen(),
+      FAQBody(),
       HomeView(onMenuTap: _openDrawer),
       const DashboardScreen(),
       const ChatbotScreen(),
@@ -104,14 +105,6 @@ class _MainScaffoldState extends State<MainScaffold> {
         ),
       ),
     );
-  }
-}
-
-class FAQScreen extends StatelessWidget {
-  const FAQScreen({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text('FAQ Screen'));
   }
 }
 
