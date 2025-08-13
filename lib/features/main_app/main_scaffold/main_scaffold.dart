@@ -1,8 +1,13 @@
 import 'package:fcai_platform/core/utils/app_colors.dart';
 import 'package:fcai_platform/features/main_app/FAQ/presentation/views/faq_body.dart';
+import 'package:fcai_platform/features/main_app/chatbot/data/logic/chat_cubit.dart';
+import 'package:fcai_platform/features/main_app/chatbot/data/services/chat_service.dart';
+import 'package:fcai_platform/features/main_app/chatbot/presentation/views/chat_bot_body.dart';
 import 'package:fcai_platform/features/main_app/home/presentation/views/home_view.dart';
 import 'package:fcai_platform/features/main_app/home/presentation/views/widgets/custom_drawer.dart';
+import 'package:fcai_platform/features/main_app/scanner/data/presentation/views/scanner_body.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MainScaffold extends StatefulWidget {
@@ -30,11 +35,14 @@ class _MainScaffoldState extends State<MainScaffold> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> screens = [
-      FAQBody(),
+      const FAQBody(),
       HomeView(onMenuTap: _openDrawer),
       const DashboardScreen(),
-      const ChatbotScreen(),
-      const ScannerScreen(),
+      BlocProvider(
+        create: (_) => ChatCubit(ChatService()),
+        child: ChatBotBody(),
+      ),
+      const ScannerBody(),
     ];
 
     return Scaffold(
@@ -113,21 +121,5 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(child: Text('Dashboard Screen'));
-  }
-}
-
-class ChatbotScreen extends StatelessWidget {
-  const ChatbotScreen({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text('Chatbot Screen'));
-  }
-}
-
-class ScannerScreen extends StatelessWidget {
-  const ScannerScreen({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text('Scanner Screen'));
   }
 }

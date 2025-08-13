@@ -1,4 +1,5 @@
 import 'package:fcai_platform/core/utils/app_colors.dart';
+import 'package:fcai_platform/core/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -22,7 +23,7 @@ class HomeAppBar extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              GoRouter.of(context).push('/notification');
+              GoRouter.of(context).push(AppRoutes.notification);
             },
             icon: Icon(
               Icons.notifications,

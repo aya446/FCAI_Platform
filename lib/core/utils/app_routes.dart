@@ -4,6 +4,7 @@ import 'package:fcai_platform/features/authentication/presentation/views/select_
 import 'package:fcai_platform/features/authentication/presentation/views/verfication_view.dart';
 import 'package:fcai_platform/features/authentication/presentation/views/splash_view.dart';
 import 'package:fcai_platform/features/main_app/main_scaffold/main_scaffold.dart';
+import 'package:fcai_platform/features/main_app/notification/presentation/views/notification_view.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRoutes {
@@ -13,6 +14,7 @@ class AppRoutes {
   static const String register = '/register';
   static const String verificationCode = '/verificationCode';
   static const String mainApp = '/main';
+  static const String notification = '/notificatio';
 }
 
 final GoRouter appRouter = GoRouter(
@@ -48,6 +50,11 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.mainApp,
       name: 'mainApp',
       builder: (context, state) => const MainScaffold(),
+    ),
+    GoRoute(
+      path: AppRoutes.notification,
+      name: 'notificatio',
+      builder: (context, state) => const NotificationView(),
     ),
   ],
 );

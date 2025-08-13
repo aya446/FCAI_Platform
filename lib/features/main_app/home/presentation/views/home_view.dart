@@ -42,7 +42,7 @@ class HomeView extends StatelessWidget {
                           courseName: 'Digital Thinking',
                           courseTime: '10:30',
                           courseLocation: 'Study hall 1',
-                          DoctorName: 'Mai Ahmed',
+                          doctorName: 'Mai Ahmed',
                         ),
                         SizedBox(height: 30),
                         TitleBar(title: 'Latest News'),

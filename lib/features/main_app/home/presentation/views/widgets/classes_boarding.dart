@@ -8,20 +8,20 @@ class ClassesBoarding extends StatelessWidget {
     required this.courseName,
     required this.courseTime,
     required this.courseLocation,
-    required this.DoctorName,
+    required this.doctorName,
   });
 
   final String courseName;
   final String courseTime;
   final String courseLocation;
-  final String DoctorName;
+  final String doctorName;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 110,
       decoration: BoxDecoration(
-        color: AppColors.secondColor,
+        color: Colors.white,
         border: Border.all(color: const Color.fromARGB(255, 186, 185, 185)),
         borderRadius: BorderRadius.circular(16),
       ),
@@ -43,7 +43,7 @@ class ClassesBoarding extends StatelessWidget {
                 Text(courseLocation, style: Styles.gray13),
               ],
             ),
-            Text(DoctorName, style: Styles.gray15),
+            Text(doctorName, style: Styles.gray15),
           ],
         ),
       ),
